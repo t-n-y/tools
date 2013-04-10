@@ -1,0 +1,21 @@
+Command line
+Télécharger Git sur git-scm.com
+pwd: savoir dans quel dossier je suis
+ls: voir les dossiers
+
+git init: créer un depot local
+Ensuite on veut synchroniser ce depot avec le distant
+git status: etat du depot
+git add . : on souhaite ajouter tous les fichiers
+git commit: ça ouvre un éditeur de text
+git commit -m “Initial commit” : commit local
+git remote add origin https://github.com/IESAmultimedia/PickUp-Basketball-Paris.git
+déclare au depot local l’adresse du depot distant
+git push -u origin master : envoie au depot distant
+
+git clone: récupère le code du projet et créé un depot local équivalent à celui distant
+git pull: récupérer les dernières informations envoyées sur le depot distant
+git log: voir le log des commits locaux
+
+git cheatsheet
+Titanium studio -> import -> existing titanium project

@@ -1,0 +1,29 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "uid": "d18071bbf8f0a8cec8d1f556c91c6af0",
+      "orig_css": "heart-empty",
+      "orig_code": 9825,
+      "css": "heart-empty",
+      "code": 9825,
+      "src": "entypo"
+    },
+    {
+      "uid": "25b34dea4784f72c710454f32ff8fa2b",
+      "orig_css": "star",
+      "orig_code": 9733,
+      "css": "star",
+      "code": 9733,
+      "src": "entypo"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "orig_css": "facebook",
+      "orig_code": 61594,
+      "css": "facebook",
+      "code": 61594,
+      "src": "fontawesome"
+    }
+  ]
+}

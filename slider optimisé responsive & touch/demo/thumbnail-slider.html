@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+	<title>FlexSlider 2</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+  <!-- Syntax Highlighter -->
+	<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+  <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../flexslider.css" type="text/css" media="screen" />
+	
+	<!-- Modernizr -->
+  <script src="js/modernizr.js"></script>
+  
+</head>
+<body class="loading">
+
+	<div id="top">
+		
+		<a href="http://www.woothemes.com" title="WooThemes">
+			<img src="images/logo.png" alt="WooThemes" />
+		</a>
+	
+	</div>
+  
+  <div id="container" class="cf">
+    
+
+	<div id="main" role="main">
+      <section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_cheesecake_brownie_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_lemon_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_donut_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_caramel_small.jpg" />
+  	    		</li>
+           
+          </ul>
+        </div>
+        <div id="carousel" class="flexslider">
+          <ul class="slides">
+            <li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_cheesecake_brownie_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_lemon_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_donut_small.jpg" />
+  	    		</li>
+  	    		<li><p>titre</p>
+  	    	    <img class="pics" src="images/kitchen_adventurer_caramel_small.jpg" />
+  	    		</li>
+            
+          </ul>
+        </div>
+      </section>
+      <aside>
+        <div class="cf">
+          <h3>Slider with Carousel Slider as Navigation</h3>
+          <ul class="toggle cf">
+            <li class="js"><a href="#view-js">JS</a></li>
+            <li class="html"><a href="#view-html">HTML</a></li>
+          </ul>
+        </div>
+        <div id="view-js" class="code">
+          <pre class="brush: js; toolbar: false; gutter: false;">
+            $(window).load(function() {
+              // The slider being synced must be initialized first
+              $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 210,
+                itemMargin: 5,
+                asNavFor: '#slider'
+              });
+              
+              $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel"
+              });
+            });
+          </pre>
+        </div>
+        <div id="view-html" class="code">
+          <pre class="brush: xml; toolbar: false; gutter: false;">
+            &lt;!-- Place somewhere in the &lt;body&gt; of your page -->
+            &lt;div id="slider" class="flexslider">
+              &lt;ul class="slides">
+                &lt;li>
+                  &lt;img src="slide1.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide2.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide3.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide4.jpg" />
+                &lt;/li>
+                &lt;!-- items mirrored twice, total of 12 -->
+              &lt;/ul>
+            &lt;/div>
+            &lt;div id="carousel" class="flexslider">
+              &lt;ul class="slides">
+                &lt;li>
+                  &lt;img src="slide1.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide2.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide3.jpg" />
+                &lt;/li>
+                &lt;li>
+                  &lt;img src="slide4.jpg" />
+                &lt;/li>
+                &lt;!-- items mirrored twice, total of 12 -->
+              &lt;/ul>
+            &lt;/div>
+          </pre>
+        </div>
+      </aside>
+    </div>
+  
+  </div>
+  
+  <!-- jQuery -->
+
+  
+  <!-- FlexSlider -->
+
+  
+  <script type="text/javascript">
+   //chargement asynchone
+   Modernizr.load({ 
+    	load: [ "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"],
+    	complete: function () {
+			if($(window).width() > 640 ) {
+				
+				Modernizr.load({ 
+	      	  	load: [ "../jquery.flexslider.js" ],
+	      	  	complete: function(){
+	      	  		$('.flexslider').flexslider({
+	      	  		  animation: "slide",
+	      	  		  start: function(slider){
+	      	  		    $('body').removeClass('loading');
+	      	  		  }
+	      	  		});
+	      	  	}
+				});
+				//remplace photo en fonction de la taille
+			   var img_list = document.getElementsByTagName('img');
+			   var i = 0;
+			   while (element = img_list[i++]) {
+				  if (element.className == 'pics') {
+					 var url = element.src;
+					 var posUrl = url.lastIndexOf('_');
+					 var preUrl = url.substring(0,(posUrl+1));
+					 var newUrl = preUrl+'big.jpg';
+					 element.src = newUrl;
+				  }
+			   }
+			}
+
+			//$(function(){
+			  //SyntaxHighlighter.all();
+			//});
+			//$(window).load(function(){
+			
+				if ($(window).width() > 640 ) {
+				
+				  $('#carousel').flexslider({
+					animation: "slide",
+					controlNav: false,
+					animationLoop: false,
+					slideshow: false,
+					itemWidth: 210,
+					itemMargin: 5,
+					asNavFor: '#slider'
+				  });
+				  
+				  $('#slider').flexslider({
+					animation: "slide",
+					controlNav: false,
+					animationLoop: false,
+					slideshow: false,
+					sync: "#carousel",
+					start: function(slider){
+					  $('body').removeClass('loading');
+					}
+				  });
+				  
+				} else {
+					$('#carousel').removeClass('flexslider');
+				}
+			//});
+		}
+	});
+  </script>
+
+  <!-- Syntax Highlighter 
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
+  
+ Optional FlexSlider Additions 
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script>
+-->
+  
+</body>
+</html>

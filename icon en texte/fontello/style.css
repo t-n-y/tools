@@ -1,0 +1,32 @@
+body, html {
+	margin: 0;
+	text-align: center;
+}
+body {
+	padding: 5em;
+	font: 300 1em/1.5 "Helvetica Neue", Helvetica;
+	background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gray_jean.png);
+}
+h1 {
+	text-transform: uppercase;
+	margin: 0;
+	font-weight: 300;
+	font-size: 3em;
+}
+h2 {
+	color: #999;
+	margin: 0;
+	font-weight: 300;
+}
+ul {
+	padding: 0;
+}
+li {
+	display: inline-block;
+	margin: .4em;
+}
+
+@media screen and(max-width:640px;){
+ul {position:absolute; top:20px; }
+
+}

@@ -1,0 +1,1 @@
+Emmet (ancien zen Coding) : simplifie l'ecriture du code. synthaxe : html:5 ou encore .maclass>nav>ul.maclass>li*6
