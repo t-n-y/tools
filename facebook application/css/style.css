@@ -1,0 +1,51 @@
+/*********************************** button **********************************/
+input[type="button"], input[type="submit"] {
+		background: rgb(157,59,115);
+		background: -moz-linear-gradient(top,  rgba(157,59,115,1) 0%, rgba(127,43,113,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,59,115,1)), color-stop(100%,rgba(127,43,113,1)));
+		background: -webkit-linear-gradient(top,  rgba(157,59,115,1) 0%,rgba(127,43,113,1) 100%);
+		background: -o-linear-gradient(top,  rgba(157,59,115,1) 0%,rgba(127,43,113,1) 100%);
+		background: -ms-linear-gradient(top,  rgba(157,59,115,1) 0%,rgba(127,43,113,1) 100%);
+		background: linear-gradient(to bottom,  rgba(157,59,115,1) 0%,rgba(127,43,113,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d3b73', endColorstr='#7f2b71',GradientType=0 );
+		border: 1px solid #7F2B71;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+		-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+		font-size: 15px;
+		color: #FFFFFF;
+		padding: 10px 15px;
+		border-radius: 4px 4px 4px 4px;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+		background: rgb(127,43,113);
+		background: -moz-linear-gradient(top,  rgba(127,43,113,1) 0%, rgba(157,59,115,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(127,43,113,1)), color-stop(100%,rgba(157,59,115,1)));
+		background: -webkit-linear-gradient(top,  rgba(127,43,113,1) 0%,rgba(157,59,115,1) 100%);
+		background: -o-linear-gradient(top,  rgba(127,43,113,1) 0%,rgba(157,59,115,1) 100%);
+		background: -ms-linear-gradient(top,  rgba(127,43,113,1) 0%,rgba(157,59,115,1) 100%);
+		background: linear-gradient(to bottom,  rgba(127,43,113,1) 0%,rgba(157,59,115,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f2b71', endColorstr='#9d3b73',GradientType=0 );
+		cursor: pointer;
+}
+
+/************************************* table ****************************************/
+
+table, tr, td{margin:0; padding:10px;}
+td{border:1px solid #CCCCCC;}
+
+/***************************** light box *******************************************/
+
+#shadowing{display: none;position: fixed;top: 0%;left: 0%;width: 100%;height: 100%;background-color: #373737;z-index:10;opacity:0.7;}
+#box {display: none;position: fixed;top: 20%;left: 35%;width: 20%;height: 35%;padding: 0;margin:0;max-height:400px;border: 8px solid #FFFFFF;border-radius:3px;background:url('../images/background-popin.jpg');z-index:11;}
+#boxheader{position:relative;top:0%;left:0%;width:100%;height:22px;border-bottom:1px solid black;background-color: #3B5998;}
+#boxclose{cursor: pointer;position:absolute;right: -15px;top:-15px;width:20px;height:20px;background:url('../images/close.png') no-repeat #000000; border:2px solid #FFFFFF; border-radius: 20px;}
+#boxcontent{padding: 8px;}
+
+#shadowingMail{display: none;position: fixed;top: 0%;left: 0%;width: 100%;height: 100%;background-color: #373737;z-index:10;opacity:0.7;}
+#boxMail {display: none;position: fixed;top: 20%;left: 35%;width: 50%;height: 35%;padding: 0;margin:0;max-height:400px;border: 8px solid #FFFFFF;border-radius:3px;background:url('../images/background-popin.jpg');z-index:11;}
+#boxheaderMAil{position:relative;top:0%;left:0%;width:100%;height:22px;border-bottom:1px solid black;background-color: #3B5998;}
+#boxcloseMail{cursor: pointer;position:absolute;right: -15px;top:-15px;width:20px;height:20px;background:url('../images/close.png') no-repeat #000000; border:2px solid #FFFFFF; border-radius: 20px;}
+#boxcontentMail{padding: 8px;}
+

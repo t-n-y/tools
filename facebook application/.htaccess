@@ -1,0 +1,6 @@
+<Directory private>
+
+order deny,allow
+deny from all
+ 
+</Directory> 
